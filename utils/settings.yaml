@@ -1,0 +1,237 @@
+#attnet = 100epochs
+#minet, MInet = 50 epochs
+
+General:
+  log_dir: logs
+  log_per_step: 1000
+  seed: 1
+  batch_size: 1
+  results_dir: results
+  ckpt_dir: checkpoint
+  data_dir: data
+
+Data:
+  elephant:
+    input_dim: 230
+    path: elephant_100x100_matlab.mat
+    Models:
+      minet:
+        lr: 0.0001
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0001
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0001
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      sa_abmilp:
+        lr: 0.0001
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      ban:
+        lr: 0.0001
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+  fox:
+    input_dim: 230
+    path: fox_100x100_matlab.mat
+    Models:
+      minet:
+        lr: 0.0001
+        weight_decay: 0.01
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0001
+        weight_decay: 0.01
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      sa_abmilp:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      ban:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+  tiger:
+    input_dim: 230
+    path: tiger_100x100_matlab.mat
+    Models:
+      minet:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0001
+        weight_decay: 0.01
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      sa_abmilp:
+        lr: 0.0001
+        weight_decay: 0.01
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      ban:
+        lr: 0.0001
+        weight_decay: 0.01
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+  musk1:
+    input_dim: 166
+    path: musk1.mat
+    Models:
+      minet:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      sa_abmilp:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      ban:
+        lr: 0.0005
+        weight_decay: 0.005
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+  musk2:
+    input_dim: 166
+    path: musk2.mat
+    Models:
+      minet:
+        lr: 0.0005
+        weight_decay: 0.03
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0005
+        weight_decay: 0.03
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0005
+        weight_decay: 0.03
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      sa_abmilp:
+        lr: 0.0005
+        weight_decay: 0.03
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+      ban:
+        lr: 0.0005
+        weight_decay: 0.03
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+  messidor:
+    input_dim: 687
+    path: messidor.mat
+    Models:
+      minet:
+        lr: 0.0005
+        weight_decay: 0.001
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      MI_net:
+        lr: 0.0005
+        weight_decay: 0.001
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
+      attnet:
+        lr: 0.0005
+        weight_decay: 0.001
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+        # weight_std: 0.05
+      sa_abmilp:
+        lr: 0.0005
+        weight_decay: 0.001
+        momentum: 0.9
+        nesterov: False
+        criterion: neg-log-likelihood
+        # weight_std: 0.05
+      ban:
+        lr: 0.0005
+        weight_decay: 0.001
+        momentum: 0.9
+        nesterov: False
+        criterion: binary-cross-entropy
+        pooling_mode: max #max, lse, ave
